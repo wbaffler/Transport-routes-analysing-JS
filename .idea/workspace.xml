@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="" />
+    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="main page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,21 +40,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649437008183</updated>
-      <workItem from="1649437010695" duration="21062000" />
+      <workItem from="1649437010695" duration="21430000" />
     </task>
+    <task id="LOCAL-00001" summary="main page">
+      <created>1649768533247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649768533247</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="main page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649685015697">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1649685015697" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1649768767442">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1649768767442" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1649444090435">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1649444090435" />
+    <state x="558" y="245" key="svn.repositoryBrowser" timestamp="1649768823969">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="558" y="245" key="svn.repositoryBrowser/0.0.1440.900@0.0.1440.900" timestamp="1649768823969" />
   </component>
 </project>
