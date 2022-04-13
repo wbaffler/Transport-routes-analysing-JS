@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Анализ совпадения маршрутов
-    наземного транспорта</title>
+  <title>Тепловая карта</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/heatmap.css">
@@ -13,6 +12,59 @@
 </head>
 <body>
   <header class="header">
-
+    <div class="header__logo">
+      <a href="./main.html" class="header__logo-link">
+        <img src="./img/logo-header.svg" alt="Анализ совпадения маршрутов
+    наземного транспорта" class="header__logo-pic">
+      </a>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="./heatmap.html" class="header__link">Тепловая карта</a>
+        </li>
+        <li class="header__item">
+          <a href="./transportmap.html" class="header__link">Карта совпадающих маршрутов</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
+  <main class="main">
+    <div class="map-wrap">
+      <div class="summary">
+        <h1 class="summary__title">Тепловая карта по районам</h1>
+        <p class="summary__text">Количество совпадающих маршрутов</p>
+        <p class="summary__sum-count">##</p>
+        <div class="summary_districts">
+          <a href="" class="summary_district-link">
+            <h2 class="summary__district-name">“Название района”</h2>
+            <p class="summary__text-in-district">Количество совпадающих маршрутов</p>
+            <p class="summary__count-in-district">##</p>
+          </a>
+          <a href="" class="summary_district-link">
+            <h2 class="summary__district-name">“Название района”</h2>
+            <p class="summary__text-in-district">Количество совпадающих маршрутов</p>
+            <p class="summary__count-in-district">##</p>
+          </a>
+          <a href="" class="summary_district-link">
+            <h2 class="summary__district-name">“Название района”</h2>
+            <p class="summary__text-in-district">Количество совпадающих маршрутов</p>
+            <p class="summary__count-in-district">##</p>
+          </a>
+          <a href="" class="summary_district-link">
+            <h2 class="summary__district-name">“Название района”</h2>
+            <p class="summary__text-in-district">Количество совпадающих маршрутов</p>
+            <p class="summary__count-in-district">##</p>
+          </a>
+          <a href="" class="summary_district-link">
+            <h2 class="summary__district-name">“Название района”</h2>
+            <p class="summary__text-in-district">Количество совпадающих маршрутов</p>
+            <p class="summary__count-in-district">##</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
 </body>
