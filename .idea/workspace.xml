@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="main page">
-      <change afterPath="$PROJECT_DIR$/transportmap.html" afterDir="false" />
+    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="all pages made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heatmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/heatmap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +47,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649437008183</updated>
-      <workItem from="1649437010695" duration="32000000" />
+      <workItem from="1649437010695" duration="32469000" />
+      <workItem from="1650103575858" duration="1151000" />
+      <workItem from="1650272728642" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1649768533247</created>
@@ -58,7 +58,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649768533247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="all pages made">
+      <created>1649878347626</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649878347627</updated>
+    </task>
+    <task id="LOCAL-00003" summary="all pages made">
+      <created>1649878503220</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649878503220</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,17 +80,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="main page" />
+    <MESSAGE value="all pages made" />
+    <option name="LAST_COMMIT_MESSAGE" value="all pages made" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649685015697">
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649878425065">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1649685015697" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1649769675118">
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1649878425065" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1649878588611">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1649769675118" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1649878588611" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1649444090435">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
