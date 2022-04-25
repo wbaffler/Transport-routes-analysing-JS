@@ -19,9 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="fix bugs">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="gitignore fix">
+      <change beforePath="$PROJECT_DIR$/img/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/AT1U3268.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Logo-footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/heatmap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon-arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/intro-photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo-header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/transportmap.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +75,7 @@
       <workItem from="1649437010695" duration="32469000" />
       <workItem from="1650103575858" duration="1151000" />
       <workItem from="1650272728642" duration="22073000" />
-      <workItem from="1650889882197" duration="300000" />
+      <workItem from="1650889882197" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1649768533247</created>
@@ -111,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650637058848</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gitignore fix">
+      <created>1650893818566</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650893818566</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,17 +149,18 @@
     <MESSAGE value="all pages made" />
     <MESSAGE value="some fix" />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="gitignore fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649878425065">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1649878425065" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1650637086055">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1650893851183">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1650637086055" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1650893851183" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1650538847763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
