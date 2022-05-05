@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c0a534b3-a0fa-409a-a7b0-edce7daeddc3"  type="text/javascript"></script>
+  <script type="module" src="./js/transportmap.js" type="text/javascript"></script>
 </head>
 <body>
 <header class="header">
@@ -30,6 +32,7 @@
 </header>
 
 <main class="main">
+  <div id="transportmap"></div>
   <div class="map-container">
     <div class="districts-choice">
       <h1 class="districts-choice__title">Карта совпадающих маршрутов</h1>
@@ -39,43 +42,14 @@
     </div>
 
     <div class="transport-info">
-      <div class="transport-info__text-container">
+      <div id="transport-info__text-container">
         <h1 class="transport-info__title-district">“Название района”</h1>
         <p class="transport-info__text-count">Количество совпадающих маршрутов</p>
-        <p class="transport-info__counter">##</p>
+        <p id="transport-info__counter"></p>
         <p class="transport-info__text-list">Список совпадающих маршрутов</p>
       </div>
-      <div class="transport-info__list">
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
-        <a href="" class="transport-info__route-link">
-          <h2 class="transport-info__routes-text">###-###</h2>
-          <p class="transport-info__type-transport">Автобус</p>
-          <p class="transport-info__percent">##%</p>
-        </a>
+      <div id="transport-info__list">
+
       </div>
     </div>
   </div>
