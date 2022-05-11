@@ -1,16 +1,9 @@
 let myMap;
-
-// Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
-const div_list = document.getElementById('transport-info__list');
-const div_count = document.getElementById('transport-info__text-container');
-
-
+const divList = document.getElementById('transport-info__list');
+const divCount = document.getElementById('transport-info__text-container');
 
 function init () {
-
-
-
   myMap = new ymaps.Map('transportmap', {
     center: [55.76, 37.64], // Москва
     zoom: 10,
@@ -44,9 +37,15 @@ function init () {
         type_transport.setAttribute("id", "transport-info__type-transport");
         type_transport.innerHTML = route.firstRoute.type;
 
+        const percent = document.createElement('p');
+        percent.setAttribute("id", "transport-info__percent");
+        let matchPercentage = (route.matchPercentage * 100).toFixed(0);
+        percent.innerHTML = matchPercentage + "%"
+
         a.appendChild(routes_text);
-        a.appendChild(type_transport)
-        div_list.appendChild(a);
+        a.appendChild(type_transport);
+        a.appendChild(percent);
+        divList.appendChild(a);
         //let coordinates = new Array();
 
         /*for (stop of route.stops){
@@ -57,8 +56,8 @@ function init () {
 
 
       }
-      console.log(routes[5].firstRoute.id);
-      for (stop of routes[5].stops){ //МЕНЯТЬ МАРШРУТ ЗДЕСЬ
+      console.log(routes[1].firstRoute.id);
+      for (stop of routes[1].stops){ //МЕНЯТЬ МАРШРУТ ЗДЕСЬ
         coordinates.push([stop.latitude, stop.longitude]);
       }
       console.log(coordinates);

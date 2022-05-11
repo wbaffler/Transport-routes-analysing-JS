@@ -155,7 +155,8 @@
         "districtId": 1614,
         "district": "район Лефортово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6545454545454545
   },
   {
     "firstRoute": {
@@ -273,7 +274,8 @@
         "districtId": 1609,
         "district": "район Вешняки"
       }
-    ]
+    ],
+    "matchPercentage": 1
   },
   {
     "firstRoute": {
@@ -415,7 +417,8 @@
         "districtId": 1717,
         "district": "Лосиноостровский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -517,7 +520,8 @@
         "districtId": 1666,
         "district": "район Южное Бутово"
       }
-    ]
+    ],
+    "matchPercentage": 0.7333333333333333
   },
   {
     "firstRoute": {
@@ -587,7 +591,8 @@
         "districtId": 1693,
         "district": "район Хорошёво-Мнёвники"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -705,7 +710,8 @@
         "districtId": 1685,
         "district": "район Покровское-Стрешнево"
       }
-    ]
+    ],
+    "matchPercentage": 1
   },
   {
     "firstRoute": {
@@ -823,7 +829,8 @@
         "districtId": 1705,
         "district": "Тимирязевский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.8387096774193549
   },
   {
     "firstRoute": {
@@ -965,7 +972,8 @@
         "districtId": 1739,
         "district": "район Северное Медведково"
       }
-    ]
+    ],
+    "matchPercentage": 0.64
   },
   {
     "firstRoute": {
@@ -1059,7 +1067,8 @@
         "districtId": 1725,
         "district": "район Тропарёво-Никулино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -1217,7 +1226,8 @@
         "districtId": 1638,
         "district": "район Северное Измайлово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -1343,7 +1353,8 @@
         "districtId": 1638,
         "district": "район Северное Измайлово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6086956521739131
   },
   {
     "firstRoute": {
@@ -1485,7 +1496,8 @@
         "districtId": 1665,
         "district": "район Солнцево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6530612244897959
   },
   {
     "firstRoute": {
@@ -1651,7 +1663,8 @@
         "districtId": 1674,
         "district": "район Внуково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6031746031746031
   },
   {
     "firstRoute": {
@@ -1745,7 +1758,8 @@
         "districtId": 1633,
         "district": "район Богородское"
       }
-    ]
+    ],
+    "matchPercentage": 0.625
   },
   {
     "firstRoute": {
@@ -1831,7 +1845,8 @@
         "districtId": 1747,
         "district": "Алтуфьевский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6428571428571429
   },
   {
     "firstRoute": {
@@ -1973,7 +1988,8 @@
         "districtId": 1710,
         "district": "район Ховрино"
       }
-    ]
+    ],
+    "matchPercentage": 0.7804878048780488
   },
   {
     "firstRoute": {
@@ -2051,7 +2067,8 @@
         "districtId": 1712,
         "district": "район Митино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -2105,7 +2122,8 @@
         "districtId": 1712,
         "district": "район Митино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -2207,7 +2225,8 @@
         "districtId": 1666,
         "district": "район Южное Бутово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6111111111111112
   },
   {
     "firstRoute": {
@@ -2261,7 +2280,8 @@
         "districtId": 1676,
         "district": "Молжаниновский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -2339,7 +2359,8 @@
         "districtId": 1676,
         "district": "Молжаниновский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6153846153846154
   },
   {
     "firstRoute": {
@@ -2521,7 +2542,8 @@
         "districtId": 1608,
         "district": "район Ивановское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -2599,7 +2621,8 @@
         "districtId": 1649,
         "district": "район Матушкино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -2661,7 +2684,8 @@
         "districtId": 1664,
         "district": "поселение Московский"
       }
-    ]
+    ],
+    "matchPercentage": 0.631578947368421
   },
   {
     "firstRoute": {
@@ -2723,7 +2747,8 @@
         "districtId": 1664,
         "district": "поселение Московский"
       }
-    ]
+    ],
+    "matchPercentage": 0.631578947368421
   },
   {
     "firstRoute": {
@@ -2801,7 +2826,8 @@
         "districtId": 1662,
         "district": "район Косино-Ухтомский"
       }
-    ]
+    ],
+    "matchPercentage": 0.6153846153846154
   },
   {
     "firstRoute": {
@@ -2951,7 +2977,8 @@
         "districtId": 1737,
         "district": "район Свиблово"
       }
-    ]
+    ],
+    "matchPercentage": 0.68
   },
   {
     "firstRoute": {
@@ -3021,7 +3048,8 @@
         "districtId": 1709,
         "district": "Головинский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.7
   },
   {
     "firstRoute": {
@@ -3171,7 +3199,8 @@
         "districtId": 1681,
         "district": "район Черёмушки"
       }
-    ]
+    ],
+    "matchPercentage": 0.7083333333333334
   },
   {
     "firstRoute": {
@@ -3273,7 +3302,8 @@
         "districtId": 1742,
         "district": "район Отрадное"
       }
-    ]
+    ],
+    "matchPercentage": 0.6470588235294118
   },
   {
     "firstRoute": {
@@ -3415,7 +3445,8 @@
         "districtId": 1699,
         "district": "район Дорогомилово"
       }
-    ]
+    ],
+    "matchPercentage": 0.7111111111111111
   },
   {
     "firstRoute": {
@@ -3541,7 +3572,8 @@
         "districtId": 1728,
         "district": "район Бирюлёво Западное"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -3667,7 +3699,8 @@
         "districtId": 1728,
         "district": "район Бирюлёво Западное"
       }
-    ]
+    ],
+    "matchPercentage": 0.6363636363636364
   },
   {
     "firstRoute": {
@@ -3753,7 +3786,8 @@
         "districtId": 1718,
         "district": "район Раменки"
       }
-    ]
+    ],
+    "matchPercentage": 0.6428571428571429
   },
   {
     "firstRoute": {
@@ -3847,7 +3881,8 @@
         "districtId": 1730,
         "district": "район Замоскворечье"
       }
-    ]
+    ],
+    "matchPercentage": 0.8695652173913043
   },
   {
     "firstRoute": {
@@ -3917,7 +3952,8 @@
         "districtId": 1607,
         "district": "Даниловский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.8235294117647058
   },
   {
     "firstRoute": {
@@ -4027,7 +4063,8 @@
         "districtId": 1709,
         "district": "Головинский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.631578947368421
   },
   {
     "firstRoute": {
@@ -4177,7 +4214,8 @@
         "districtId": 1685,
         "district": "район Покровское-Стрешнево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6181818181818182
   },
   {
     "firstRoute": {
@@ -4335,7 +4373,8 @@
         "districtId": 1696,
         "district": "Тверской район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6428571428571429
   },
   {
     "firstRoute": {
@@ -4461,7 +4500,8 @@
         "districtId": 1720,
         "district": "Донской район"
       }
-    ]
+    ],
+    "matchPercentage": 0.717948717948718
   },
   {
     "firstRoute": {
@@ -4579,7 +4619,8 @@
         "districtId": 1615,
         "district": "район Печатники"
       }
-    ]
+    ],
+    "matchPercentage": 0.65
   },
   {
     "firstRoute": {
@@ -4681,7 +4722,8 @@
         "districtId": 1615,
         "district": "район Печатники"
       }
-    ]
+    ],
+    "matchPercentage": 0.6111111111111112
   },
   {
     "firstRoute": {
@@ -4887,7 +4929,8 @@
         "districtId": 1659,
         "district": "поселение Михайлово-Ярцевское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6575342465753424
   },
   {
     "firstRoute": {
@@ -5085,7 +5128,8 @@
         "districtId": 1659,
         "district": "поселение Михайлово-Ярцевское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6133333333333333
   },
   {
     "firstRoute": {
@@ -5267,7 +5311,8 @@
         "districtId": 1657,
         "district": "поселение Щаповское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6268656716417911
   },
   {
     "firstRoute": {
@@ -5457,7 +5502,8 @@
         "districtId": 1659,
         "district": "поселение Михайлово-Ярцевское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6285714285714286
   },
   {
     "firstRoute": {
@@ -5655,7 +5701,8 @@
         "districtId": 1633,
         "district": "район Богородское"
       }
-    ]
+    ],
+    "matchPercentage": 0.9019607843137255
   },
   {
     "firstRoute": {
@@ -5781,7 +5828,8 @@
         "districtId": 1631,
         "district": "Рязанский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.7
   },
   {
     "firstRoute": {
@@ -5899,7 +5947,8 @@
         "districtId": 1701,
         "district": "район Марьина Роща"
       }
-    ]
+    ],
+    "matchPercentage": 0.6842105263157895
   },
   {
     "firstRoute": {
@@ -6017,7 +6066,8 @@
         "districtId": 1745,
         "district": "Ярославский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6341463414634146
   },
   {
     "firstRoute": {
@@ -6151,7 +6201,8 @@
         "districtId": 1607,
         "district": "Даниловский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.625
   },
   {
     "firstRoute": {
@@ -6237,7 +6288,8 @@
         "districtId": 1646,
         "district": "район Крюково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6923076923076923
   },
   {
     "firstRoute": {
@@ -6363,7 +6415,8 @@
         "districtId": 1630,
         "district": "район Коньково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6363636363636364
   },
   {
     "firstRoute": {
@@ -6473,7 +6526,8 @@
         "districtId": 1646,
         "district": "район Крюково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6486486486486487
   },
   {
     "firstRoute": {
@@ -6543,7 +6597,8 @@
         "districtId": 1664,
         "district": "поселение Московский"
       }
-    ]
+    ],
+    "matchPercentage": 1
   },
   {
     "firstRoute": {
@@ -6653,7 +6708,8 @@
         "districtId": 1609,
         "district": "район Вешняки"
       }
-    ]
+    ],
+    "matchPercentage": 0.6153846153846154
   },
   {
     "firstRoute": {
@@ -6771,7 +6827,8 @@
         "districtId": 1609,
         "district": "район Вешняки"
       }
-    ]
+    ],
+    "matchPercentage": 0.6341463414634146
   },
   {
     "firstRoute": {
@@ -6857,7 +6914,8 @@
         "districtId": 1712,
         "district": "район Митино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6206896551724138
   },
   {
     "firstRoute": {
@@ -6991,7 +7049,8 @@
         "districtId": 1625,
         "district": "район Новогиреево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6976744186046512
   },
   {
     "firstRoute": {
@@ -7085,7 +7144,8 @@
         "districtId": 1611,
         "district": "район Люблино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6451612903225806
   },
   {
     "firstRoute": {
@@ -7227,7 +7287,8 @@
         "districtId": 1615,
         "district": "район Печатники"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -7313,7 +7374,8 @@
         "districtId": 1709,
         "district": "Головинский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6428571428571429
   },
   {
     "firstRoute": {
@@ -7383,7 +7445,8 @@
         "districtId": 1715,
         "district": "поселение Рязановское"
       }
-    ]
+    ],
+    "matchPercentage": 0.7
   },
   {
     "firstRoute": {
@@ -7525,7 +7588,8 @@
         "districtId": 1707,
         "district": "Войковский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6274509803921569
   },
   {
     "firstRoute": {
@@ -7771,7 +7835,8 @@
         "districtId": 1721,
         "district": "район Якиманка"
       }
-    ]
+    ],
+    "matchPercentage": 0.6987951807228916
   },
   {
     "firstRoute": {
@@ -7921,7 +7986,8 @@
         "districtId": 1649,
         "district": "район Матушкино"
       }
-    ]
+    ],
+    "matchPercentage": 0.6071428571428571
   },
   {
     "firstRoute": {
@@ -8007,7 +8073,8 @@
         "districtId": 1647,
         "district": "район Старое Крюково"
       }
-    ]
+    ],
+    "matchPercentage": 0.72
   },
   {
     "firstRoute": {
@@ -8197,7 +8264,8 @@
         "districtId": 1740,
         "district": "район Сокольники"
       }
-    ]
+    ],
+    "matchPercentage": 0.6285714285714286
   },
   {
     "firstRoute": {
@@ -8435,7 +8503,8 @@
         "districtId": 1637,
         "district": "Таганский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.9180327868852459
   },
   {
     "firstRoute": {
@@ -8521,7 +8590,8 @@
         "districtId": 1666,
         "district": "район Южное Бутово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6206896551724138
   },
   {
     "firstRoute": {
@@ -8591,7 +8661,8 @@
         "districtId": 1607,
         "district": "Даниловский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.7
   },
   {
     "firstRoute": {
@@ -8717,7 +8788,8 @@
         "districtId": 1646,
         "district": "район Крюково"
       }
-    ]
+    ],
+    "matchPercentage": 0.9032258064516129
   },
   {
     "firstRoute": {
@@ -8811,7 +8883,8 @@
         "districtId": 1646,
         "district": "район Крюково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -8921,7 +8994,8 @@
         "districtId": 1666,
         "district": "район Южное Бутово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6153846153846154
   },
   {
     "firstRoute": {
@@ -9063,7 +9137,8 @@
         "districtId": 1653,
         "district": "поселение Щербинка"
       }
-    ]
+    ],
+    "matchPercentage": 0.6153846153846154
   },
   {
     "firstRoute": {
@@ -9197,7 +9272,8 @@
         "districtId": 1733,
         "district": "район Чертаново Южное"
       }
-    ]
+    ],
+    "matchPercentage": 0.6521739130434783
   },
   {
     "firstRoute": {
@@ -9451,7 +9527,8 @@
         "districtId": 1692,
         "district": "Пресненский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.7792207792207793
   },
   {
     "firstRoute": {
@@ -9553,7 +9630,8 @@
         "districtId": 1609,
         "district": "район Вешняки"
       }
-    ]
+    ],
+    "matchPercentage": 0.6111111111111112
   },
   {
     "firstRoute": {
@@ -9655,7 +9733,8 @@
         "districtId": 1648,
         "district": "район Савёлки"
       }
-    ]
+    ],
+    "matchPercentage": 0.7096774193548387
   },
   {
     "firstRoute": {
@@ -9813,7 +9892,8 @@
         "districtId": 1692,
         "district": "Пресненский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6206896551724138
   },
   {
     "firstRoute": {
@@ -9907,7 +9987,8 @@
         "districtId": 1695,
         "district": "Алексеевский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -10001,7 +10082,8 @@
         "districtId": 1695,
         "district": "Алексеевский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6896551724137931
   },
   {
     "firstRoute": {
@@ -10167,7 +10249,8 @@
         "districtId": 1627,
         "district": "район Преображенское"
       }
-    ]
+    ],
+    "matchPercentage": 0.76
   },
   {
     "firstRoute": {
@@ -10269,7 +10352,8 @@
         "districtId": 1685,
         "district": "район Покровское-Стрешнево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6111111111111112
   },
   {
     "firstRoute": {
@@ -10419,7 +10503,8 @@
         "districtId": 1736,
         "district": "Бабушкинский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.6296296296296297
   },
   {
     "firstRoute": {
@@ -10569,7 +10654,8 @@
         "districtId": 1627,
         "district": "район Преображенское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6296296296296297
   },
   {
     "firstRoute": {
@@ -10711,7 +10797,8 @@
         "districtId": 1684,
         "district": "район Сокол"
       }
-    ]
+    ],
+    "matchPercentage": 0.6808510638297872
   },
   {
     "firstRoute": {
@@ -10869,7 +10956,8 @@
         "districtId": 1660,
         "district": "район Куркино"
       }
-    ]
+    ],
+    "matchPercentage": 0.8571428571428571
   },
   {
     "firstRoute": {
@@ -10955,7 +11043,8 @@
         "districtId": 1685,
         "district": "район Покровское-Стрешнево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6206896551724138
   },
   {
     "firstRoute": {
@@ -11049,7 +11138,8 @@
         "districtId": 1706,
         "district": "район Коптево"
       }
-    ]
+    ],
+    "matchPercentage": 0.6451612903225806
   },
   {
     "firstRoute": {
@@ -11199,7 +11289,8 @@
         "districtId": 1663,
         "district": "район Северное Бутово"
       }
-    ]
+    ],
+    "matchPercentage": 0.6071428571428571
   },
   {
     "firstRoute": {
@@ -11309,7 +11400,8 @@
         "districtId": 1645,
         "district": "поселение Первомайское"
       }
-    ]
+    ],
+    "matchPercentage": 0.7058823529411765
   },
   {
     "firstRoute": {
@@ -11411,7 +11503,8 @@
         "districtId": 1645,
         "district": "поселение Первомайское"
       }
-    ]
+    ],
+    "matchPercentage": 0.7096774193548387
   },
   {
     "firstRoute": {
@@ -11537,7 +11630,8 @@
         "districtId": 1615,
         "district": "район Печатники"
       }
-    ]
+    ],
+    "matchPercentage": 0.6511627906976745
   },
   {
     "firstRoute": {
@@ -11639,7 +11733,8 @@
         "districtId": 1744,
         "district": "район Фили-Давыдково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6666666666666666
   },
   {
     "firstRoute": {
@@ -11733,7 +11828,8 @@
         "districtId": 1744,
         "district": "район Фили-Давыдково"
       }
-    ]
+    ],
+    "matchPercentage": 0.7142857142857143
   },
   {
     "firstRoute": {
@@ -11835,7 +11931,8 @@
         "districtId": 1744,
         "district": "район Фили-Давыдково"
       }
-    ]
+    ],
+    "matchPercentage": 0.6111111111111112
   },
   {
     "firstRoute": {
@@ -11985,7 +12082,8 @@
         "districtId": 1699,
         "district": "район Дорогомилово"
       }
-    ]
+    ],
+    "matchPercentage": 0.7555555555555555
   },
   {
     "firstRoute": {
@@ -12079,7 +12177,8 @@
         "districtId": 1745,
         "district": "Ярославский район"
       }
-    ]
+    ],
+    "matchPercentage": 0.7407407407407407
   },
   {
     "firstRoute": {
@@ -12237,7 +12336,8 @@
         "districtId": 1627,
         "district": "район Преображенское"
       }
-    ]
+    ],
+    "matchPercentage": 0.6545454545454545
   },
   {
     "firstRoute": {
@@ -12395,6 +12495,7 @@
         "districtId": 1683,
         "district": "район Беговой"
       }
-    ]
+    ],
+    "matchPercentage": 0.631578947368421
   }
 ]

@@ -444,7 +444,7 @@ body{
   color: var(--color-text);
 }
 
-.summary__sum-count{
+#summary__sum-count{
   width: 21px;
   height: 22px;
   margin-top: 10px;
@@ -457,7 +457,7 @@ body{
   color: #7A7A7A;
 }
 
-.summary_districts{
+#summary_districts{
 
   max-height: 363px;
   margin-top: 20px;
@@ -477,17 +477,17 @@ body{
   border-radius: 30px;
 }
 
-.summary_district-link{
+#summary_district-link{
   display: block;
   padding-left: 30px;
   height: 167px;
 }
 
-.summary_district-link:hover{
-  background-color: #fcfcfc;
+#summary_district-link:hover{
+  background: #f5f5f5;
 }
 
-.summary__district-name{
+#summary__district-name{
   display: block;
   padding-top: 16px;
   width: 273px;
@@ -501,7 +501,7 @@ body{
   color: var(--color-text);
 }
 
-.summary__text-in-district{
+#summary__text-in-district{
   display: block;
   width: 273px;
   height: 50px;
@@ -514,7 +514,7 @@ body{
   color: #7A7A7A;
 }
 
-.summary__count-in-district{
+#summary__count-in-district{
   display: block;
   width: 32px;
   height: 38.32px;
@@ -681,7 +681,7 @@ body{
   flex-direction: row;
   align-items: center;
   padding-left: 30px;
-  gap: 40px;
+  gap: 20px;
   height: 72px;
 }
 
@@ -690,7 +690,7 @@ body{
 }
 
 #transport-info__routes-text{
-  width: 104px;
+
   height: 30px;
 
   font-style: normal;
