@@ -19,12 +19,6 @@ function init () {
     }
   });
   DataProcessing();
-
-
-
-
-
-
 }
 
 function DataProcessing(){
@@ -93,7 +87,7 @@ function DrawHeatMap(features, heatmap){
 function BuildHtml(feature){
   const districts_list = document.getElementById('summary_districts');
   const a = document.createElement('a');
-  a.href = "#";//"javascript:setCenter([0, 0])";
+  a.href = "#";
   //a.onclick = setCenter([0,0]);
   a.onclick = () => setDistrictOnMap(feature);
   a.setAttribute("id", "summary_district-link");
