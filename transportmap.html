@@ -33,26 +33,28 @@
 
 <main class="main">
   <div id="transportmap"></div>
-  <div class="map-container">
-    <div class="districts-choice">
-      <h1 class="districts-choice__title">Карта совпадающих маршрутов</h1>
-      <a href="" class="districts-choice__button">
-        <p class="districts-choice__button-text">Все районы</p>
-      </a>
+  <div id="data-container">
+    <div class="map-container">
+      <div class="districts-choice">
+        <h1 class="districts-choice__title">Карта совпадающих маршрутов</h1>
+        <a href="#" id="districts-choice__button">
+          <p id="districts-choice__button-text">Выбор района</p>
+        </a>
+      </div>
+
+      <div id="transport-info">
+        <div id="transport-info__text-container">
+          <h1 id="transport-info__title-district">Все районы</h1>
+          <p class="transport-info__text-count">Количество совпадающих маршрутов</p>
+          <p id="transport-info__counter"></p>
+          <p class="transport-info__text-list">Список совпадающих маршрутов</p>
+        </div>
+
+      </div>
     </div>
 
-    <div class="transport-info">
-      <div id="transport-info__text-container">
-        <h1 class="transport-info__title-district">“Название района”</h1>
-        <p class="transport-info__text-count">Количество совпадающих маршрутов</p>
-        <p id="transport-info__counter"></p>
-        <p class="transport-info__text-list">Список совпадающих маршрутов</p>
-      </div>
-      <div id="transport-info__list">
-
-      </div>
-    </div>
   </div>
+
 
 </main>
 

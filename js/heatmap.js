@@ -11,13 +11,13 @@ function init () {
     controls: []
   });
 
-  myMap.controls.add('zoomControl',{
+  /*myMap.controls.add('zoomControl',{
     float: 'none',
     position: {
       top: '30px',
       left: '420px'
     }
-  });
+  });*/
   DataProcessing();
 }
 
@@ -44,6 +44,7 @@ function ProcessDistricts(districts) {
   ymaps.modules.require(['Heatmap'], function (Heatmap) {
     let data = [],
       heatmap = new Heatmap();
+    heatmap.options.set('dissipating', true);
     heatmap.setMap(myMap);
 
     //let newData = [[55.814128, 37.589213]];
@@ -63,6 +64,8 @@ function ProcessDistricts(districts) {
             coordinates: coords
           },
           properties: {
+            //dissipating: true,
+            //radius: 40,
             weight: district.stopsCount
           }
         }
@@ -72,6 +75,7 @@ function ProcessDistricts(districts) {
 
       })
     }
+
   });
 }
 
@@ -81,6 +85,7 @@ function DrawHeatMap(features, heatmap){
     type: 'FeatureCollection',
     features: features
   };
+  //console.log(heatmap.getData());
   heatmap.setData(data);
 }
 
@@ -145,7 +150,7 @@ async function ProcessDistrictsAsync (districts) {
           coordinates: coords
         },
         properties: {
-          weight: district.stopsCount
+          weight: district.routePairsCount
         }
       }
       features.push(feature);

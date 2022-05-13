@@ -336,6 +336,12 @@ body{
   gap: 30px;
 }
 
+#data-container{
+  display: flex;
+  flex-direction: row;
+
+}
+
 .header{
   display: flex;
   flex-direction: row;
@@ -465,14 +471,14 @@ body{
   overflow-y: scroll;
 }
 
-.summary_districts::-webkit-scrollbar {
+#summary_districts::-webkit-scrollbar {
   width: 7px;
 
   background-color: #E5E5E5;
   border-radius: 30px;
 }
 
-.summary_districts::-webkit-scrollbar-thumb {
+#summary_districts::-webkit-scrollbar-thumb {
   background-color: rgba(87, 96, 101, 1);
   border-radius: 30px;
 }
@@ -554,7 +560,7 @@ body{
   color: var(--color-title);
 }
 
-.districts-choice__button{
+#districts-choice__button{
   display: block;
   width: 287.91px;
   height: 50px;
@@ -565,11 +571,11 @@ body{
   border-radius: var(--radius-blocks);
 }
 
-.districts-choice__button:hover{
+#districts-choice__button:hover{
   background: #f5f5f5;
 }
 
-.districts-choice__button-text{
+#districts-choice__button-text{
   display: flex;
   justify-content: center;
   padding-top: 12px;
@@ -586,7 +592,7 @@ body{
   color: var(--color-text);
 }
 
-.transport-info{
+#transport-info{
   display: flex;
   flex-direction: column;
 
@@ -602,9 +608,9 @@ body{
   padding-left: 30px;
 }
 
-.transport-info__title-district{
+#transport-info__title-district{
   width: 287.91px;
-  height: 32.65px;
+
   margin-top: 15.46px;
 
   font-style: normal;
@@ -664,14 +670,14 @@ body{
   overflow-y: scroll;
 }
 
-.transport-info__list::-webkit-scrollbar {
+#transport-info__list::-webkit-scrollbar {
   width: 7px;
 
   background-color: #E5E5E5;
   border-radius: 30px;
 }
 
-.transport-info__list::-webkit-scrollbar-thumb {
+#transport-info__list::-webkit-scrollbar-thumb {
   background-color: rgba(87, 96, 101, 1);
   border-radius: 30px;
 }
@@ -726,6 +732,91 @@ body{
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
+
+  color: var(--color-text);
+}
+
+#districts-window{
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 420px;
+  width: 337px;
+  height: 620.344px;
+
+  background: var(--color-block);
+  border-radius: var(--radius-blocks);
+}
+
+#districts-window__container-top{
+  display: flex;
+  flex-direction: row;
+}
+
+#districts-window__title{
+  display: block;
+  width: 284.58px;
+  margin-left: 24.96px;
+  padding-top: 21px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: var(--color-title);
+}
+
+#districts-window__cross-but{
+  width: 24px;
+  height: 24px;
+  padding-top: 21px;
+  padding-right: 15px;
+}
+
+#districts-window__list{
+  max-height: 520px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+}
+
+#districts-window__list::-webkit-scrollbar {
+  width: 7px;
+
+  background-color: #E5E5E5;
+  border-radius: 30px;
+}
+
+#districts-window__list::-webkit-scrollbar-thumb {
+  background-color: rgba(87, 96, 101, 1);
+  border-radius: 30px;
+}
+
+#districts-window__district-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  gap: 20px;
+  height: 72px;
+}
+
+#districts-window__district-link:hover{
+  background: #f5f5f5;
+}
+
+#districts-window__districts-text{
+
+  height: 27px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: var(--color-text);
+  /* identical to box height */
+
 
   color: var(--color-text);
 }
