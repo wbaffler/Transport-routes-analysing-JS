@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="js and work with api added">
+    <list default="true" id="9c4e0e01-84bf-4832-9f82-c893cc39b411" name="Default Changelist" comment="fixed longtime heatmap loading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/heatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/heatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/transportmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/transportmap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,7 @@
       <workItem from="1650272728642" duration="22073000" />
       <workItem from="1650889882197" duration="1171000" />
       <workItem from="1651424409503" duration="84889000" />
-      <workItem from="1652648965339" duration="8242000" />
+      <workItem from="1652648965339" duration="11327000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1649768533247</created>
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652447245943</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed longtime heatmap loading">
+      <created>1652728864574</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652728864574</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +212,8 @@
     <MESSAGE value="made data processing and displaying in heatmap page" />
     <MESSAGE value="transport map fixed structure" />
     <MESSAGE value="js and work with api added" />
-    <option name="LAST_COMMIT_MESSAGE" value="js and work with api added" />
+    <MESSAGE value="fixed longtime heatmap loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed longtime heatmap loading" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652725002314">
@@ -282,10 +292,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="304" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1652725025336" />
-    <state x="328" y="148" key="Vcs.Push.Dialog.v2" timestamp="1652447264056">
+    <state x="328" y="148" key="Vcs.Push.Dialog.v2" timestamp="1652728889609">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="328" y="148" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1652447264056" />
+    <state x="328" y="148" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1652728889609" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1650538847763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -1,5 +1,5 @@
 let myMap;
-const moscowCenterCoords = [55.76, 37.64]
+const moscowCenterCoords = [55.76, 37.64];
 ymaps.ready(init);
 const divCount = document.getElementById('transport-info__text-container');
 
@@ -10,6 +10,7 @@ function init () {
     zoom: 10,
     controls: []
   });
+  myMap.options.set('minZoom', 10);
 
   /*myMap.controls.add('zoomControl', {
     float: 'none',

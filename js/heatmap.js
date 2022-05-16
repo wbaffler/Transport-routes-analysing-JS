@@ -1,6 +1,7 @@
 let myMap;
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
+const moscowCenterCoords = [55.76, 37.64];
 
 function init () {
   // Создание экземпляра карты и его привязка к контейнеру с
@@ -41,43 +42,7 @@ function DataProcessing(){
     });
 }
 
-/*function ProcessDistricts(districts) {
-  let geoCode;
-  let features = [];
-  ymaps.modules.require(['Heatmap'], function (Heatmap) {
-    let data = [],
-      heatmap = new Heatmap();
-    //heatmap.options.set('dissipating', true);
-    heatmap.setMap(myMap);
-    //let newData = [[55.814128, 37.589213]];
 
-    for (const district of districts) {
-      const fullName = district.name + ", Москва";
-      geoCode = ymaps.geocode(fullName, {
-        results: 1
-      }).then(function (res) {
-        let firstGeoObject = res.geoObjects.get(0);
-        let coords = firstGeoObject.geometry.getCoordinates();
-        let feature = {
-          id: district.name,
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: coords
-          },
-          properties: {
-            weight: district.stopsCount
-          }
-        }
-        features.push(feature);
-        DrawHeatMap(features, heatmap);
-        BuildHtml(feature);
-
-      })
-    }
-
-  });
-}*/
 
 function ProcessDistricts(districts) {
   let geoCode;
@@ -109,10 +74,7 @@ function ProcessDistricts(districts) {
             }
           }
           features.push(feature);
-          //setTimeout(() => console.log("timeout" + features.length), 0);
-          //console.log(features.length);
-          //DrawHeatMap(features, heatmap);
-          BuildHtml(feature);
+
           if (features.length === districts.length)
           {
             resolve(features)
@@ -120,28 +82,14 @@ function ProcessDistricts(districts) {
 
         })
       }
-      //while (features.length < districts.length)
-      //setTimeout(()=> resolve(features), 1000);
-      //console.log(features.length);
     });
-    promise.then(res => DrawHeatMap(res, heatmap));
-
+    promise.then(res => {
+      BuildHtml(res.sort((a, b) => a.properties.weight > b.properties.weight ? -1 : 1));
+      DrawHeatMap(res, heatmap);
+    });
   });
 }
 
-function SetupHeatMap (heatmap){
-
-  heatmap.options.set('radius', 20);
-
-  let data = {
-    type: 'FeatureCollection',
-    features: features
-  };
-  //console.log(heatmap.getData());
-  heatmap.options.set('radius', 500);
-  heatmap.options.set('dissipating', true);
-  heatmap.setData(data);
-}
 
 function DrawHeatMap(features, heatmap){
   console.log(features);
@@ -164,31 +112,39 @@ function DrawHeatMap2 (data, heatmap){
   heatmap.setData(newData);
 }
 
-function BuildHtml(feature){
-  const districts_list = document.getElementById('summary_districts');
-  const a = document.createElement('a');
-  a.href = "#";
-  //a.onclick = setCenter([0,0]);
-  a.onclick = () => setDistrictOnMap(feature);
-  a.setAttribute("id", "summary_district-link");
+function BuildHtml(features){
+  for (let feature of features) {
+    const districts_list = document.getElementById('summary_districts');
+    const a = document.createElement('a');
+    a.href = "#";
+    a.style.background = "";
+    //a.onclick = setCenter([0,0]);
+    a.onclick = () => {
+      setDistrictOnMap(feature);
+      ChangeDistrictButton(a);
+      ReturnToOrigin(a);
+    }
 
-  const districtName = document.createElement('h2');
-  districtName.setAttribute("id", "summary__district-name");
-  districtName.innerHTML = feature.id;
+    a.setAttribute("class", "summary_district-link");
 
-  const countText = document.createElement('p');
-  countText.setAttribute("id", "summary__text-in-district");
-  countText.innerHTML = "Количество совпадающих маршрутов";
+    const districtName = document.createElement('h2');
+    districtName.setAttribute("class", "summary__district-name");
+    districtName.innerHTML = feature.id;
 
-  const routesCount = document.createElement('p');
-  routesCount.setAttribute("id", "summary__count-in-district");
-  routesCount.innerHTML = feature.properties.weight;
+    const countText = document.createElement('p');
+    countText.setAttribute("class", "summary__text-in-district");
+    countText.innerHTML = "Количество совпадающих маршрутов";
+
+    const routesCount = document.createElement('p');
+    routesCount.setAttribute("class", "summary__count-in-district");
+    routesCount.innerHTML = feature.properties.weight;
 
 
-  a.appendChild(districtName);
-  a.appendChild(countText);
-  a.appendChild(routesCount);
-  districts_list.appendChild(a);
+    a.appendChild(districtName);
+    a.appendChild(countText);
+    a.appendChild(routesCount);
+    districts_list.appendChild(a);
+  }
 }
 
 function setDistrictOnMap (feature) {
@@ -204,7 +160,36 @@ function setDistrictOnMap (feature) {
     }))
 }
 
+function ChangeDistrictButton (el){
+  if (el.style.background === '') {
+    el.style.background = "#E9EBEF";
+  }
+  else{
+    el.style.background = "";
+    setDefaultParams();
+  }
+}
 
+function ReturnToOrigin(el){
+  let a = document.getElementsByClassName('summary_district-link');
+  for (let button of a){
+    if (button !== el)
+    {
+      button.style.background = ""
+    }
+    //button.style.background = '#FFFFFF';
+    //button.classList.add('summary_district-link.hover');
+
+  }
+
+  //console.log(a);
+}
+
+function setDefaultParams(){
+  myMap.geoObjects.removeAll();
+  myMap.setCenter(moscowCenterCoords);
+  myMap.setZoom(10);
+}
 
 async function ProcessDistrictsAsync (districts) {
   let geoCode;
