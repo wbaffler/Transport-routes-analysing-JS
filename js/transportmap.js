@@ -2,6 +2,7 @@ let myMap;
 const moscowCenterCoords = [55.76, 37.64];
 ymaps.ready(init);
 const divCount = document.getElementById('transport-info__text-container');
+const allDistricts = "Все районы"
 
 
 function init () {
@@ -12,17 +13,17 @@ function init () {
   });
   myMap.options.set('minZoom', 10);
 
-  /*myMap.controls.add('zoomControl', {
+  myMap.controls.add('zoomControl', {
     float: 'none',
     position: {
       top: '30px',
-      left: '420px'
+      left: '430px'
     }
-  });*/
+  });
   DataProcessing();
 }
 
-function DataProcessing(){
+function DataProcessing() {
 
   fetch('http://localhost:63342/transport/js/routes.json')
     .then(response => response.json()) // распарсим строку из тела HTTP ответа как JSON
@@ -30,20 +31,20 @@ function DataProcessing(){
       fetch('http://localhost:63342/transport/js/heat.json')
         .then(response => response.json()) // распарсим строку из тела HTTP ответа как JSON
         .then(districts => {
-          let button = document.getElementById("districts-choice__button");
-          button.onclick = () => DisplayDistricts(districts, routes);
-
-
-        });
-      BuildRoutes(routes);
-
-    });
-
-
+          DefineDistricts(districts).then(modDistricts => {
+            setRouteColor(routes).then(modRoutes =>
+              BuildRoutes(modRoutes, modDistricts[0])
+            ).then(() => {
+              let button = document.getElementById("districts-choice__button");
+              button.onclick = () => DisplayDistricts(modDistricts, routes)
+            })
+          })
+        })
+    })
 
 }
 
-function BuildRoutes(routes){
+function BuildRoutes(routes, district){
   const parent = document.getElementById('transport-info');
   const divList = document.createElement('div');
   divList.setAttribute('id', 'transport-info__list');
@@ -55,20 +56,25 @@ function BuildRoutes(routes){
     let coordinates = [];
 
     const a = document.createElement('a');
-    a.setAttribute("id", "transport-info__route-link");
+    a.setAttribute("class", "transport-info__route-link");
     a.href = "#";
-    a.onclick = () => FindRoute(route);
+    a.style.background = '';
+    a.onclick = () => {
+      setRouteOnMap(route);
+      ChangeRouteButton(a, routes, district);
+      ReturnToOrigin(a);
+    }
 
     const routes_text = document.createElement('h2');
-    routes_text.setAttribute("id", "transport-info__routes-text");
+    routes_text.setAttribute("class", "transport-info__routes-text");
     routes_text.innerHTML = route.firstRoute.number + "-" + route.secondRoute.number;
 
     const type_transport = document.createElement('p');
-    type_transport.setAttribute("id", "transport-info__type-transport");
+    type_transport.setAttribute("class", "transport-info__type-transport");
     type_transport.innerHTML = route.firstRoute.type;
 
     const percent = document.createElement('p');
-    percent.setAttribute("id", "transport-info__percent");
+    percent.setAttribute("class", "transport-info__percent");
     let matchPercentage = (route.matchPercentage * 100).toFixed(0);
     percent.innerHTML = matchPercentage + "%"
 
@@ -87,8 +93,27 @@ function BuildRoutes(routes){
   }
 }
 
+function ChangeRouteButton (el, routes, district){
+  if (el.style.background === '') {
+    el.style.background = "#E9EBEF";
+  }
+  else{
+    el.style.background = "";
+    DisplayAllRoutes (routes, district);
+  }
+}
+
+function ReturnToOrigin(el) {
+  let a = document.getElementsByClassName('transport-info__route-link');
+  for (let button of a) {
+    if (button !== el) {
+      button.style.background = ""
+    }
+  }
+}
+
 function DrawRouteOnMap(coordinates, route, isDistrict){
-  let col = '#' + getRanHex(6);
+  //let col = '#' + getRanHex(6);
 
 
   let headerBalloon = route.firstRoute.type +": " + route.firstRoute.number + " - " + route.secondRoute.number;
@@ -104,7 +129,7 @@ function DrawRouteOnMap(coordinates, route, isDistrict){
       // Отключаем кнопку закрытия балуна.
       balloonCloseButton: true,
       // Цвет линии.
-      strokeColor: col,
+      strokeColor: route.color,
       // Ширина линии.
       strokeWidth: 2,
       // Коэффициент прозрачности.
@@ -112,19 +137,27 @@ function DrawRouteOnMap(coordinates, route, isDistrict){
     });
   if (!isDistrict){
     for (let r of route.stops){
-      console.log(r.latitude, r.latitude)
       myMap.geoObjects
         .add(new ymaps.Placemark([r.latitude, r.longitude], {
           //hintContent: '1',
           hintContent: r.name
         }, {
           preset: 'islands#circleIcon',
-          iconColor: col,
+          iconColor: route.color,
         }))
     }
   }
 
   myMap.geoObjects.add(routeLine);
+}
+
+function setRouteColor(routes){
+  return new Promise(function (resolve){
+    for (let route of routes) {
+      route.color = '#' + getRanHex(6)
+    }
+    resolve(routes);
+  })
 }
 
 const getRanHex = size => {
@@ -137,7 +170,7 @@ const getRanHex = size => {
   return result.join('');
 }
 
-function FindRoute(route){
+function setRouteOnMap(route){
   //let a = document.getElementsByClassName('transport-info__route-link-cl');
   let coordinates = [];
   for (stop of route.stops){
@@ -154,11 +187,23 @@ function DisplayDistricts(districts, routes){
   if (!document.getElementById("districts-window"))
   {
     let listPlace = CreateWindow();
-    let districtAll = {
-      name: "Все районы"
-    };
+    BuildDistrictsWindow(districts, listPlace, routes);
+  }
+}
 
-    BuildDistrictsWindow(districtAll, moscowCenterCoords, listPlace, routes);
+function DefineDistricts (districts){
+  return new Promise(function(resolve, reject) {
+
+    let districtsArr = [];
+    let districtAll = {
+      obj: {
+        name: allDistricts
+      },
+      coords: moscowCenterCoords
+    };
+    const districtsLength = districts.length + 1;
+    districtsArr.push(districtAll);
+    //BuildDistrictsWindow(districtAll, moscowCenterCoords, listPlace, routes);
     let geoCode;
     for (const district of districts) {
       const fullName = district.name + ", Москва";
@@ -167,11 +212,19 @@ function DisplayDistricts(districts, routes){
       }).then(function (res) {
         let firstGeoObject = res.geoObjects.get(0);
         let coords = firstGeoObject.geometry.getCoordinates();
-        BuildDistrictsWindow(district, coords, listPlace, routes);
+        let districtObj = {
+          obj: district,
+          coords: coords
+        }
+        districtsArr.push(districtObj);
+        if (districtsArr.length === districtsLength)
+        {
+          resolve(districtsArr.sort((a, b) => a.obj.routePairsCount > b.obj.routePairsCount ? -1 : 1));
+        }
+        //BuildDistrictsWindow(district, coords, listPlace, routes);
       })
     }
-  }
-
+  });
 }
 
 function CreateWindow(){
@@ -208,16 +261,19 @@ function CreateWindow(){
   return listPlace;
 }
 
-function BuildDistrictsWindow(district, coords, listPlace, routes){
-  const districtLink = document.createElement('a');
-  districtLink.setAttribute("id", "districts-window__district-link");
-  districtLink.href = "#";
-  districtLink.onclick = () => FindDistrict(coords, district, routes);
-  const districtName = document.createElement('h2');
-  districtName.setAttribute("id", "districts-window__districts-text");
-  districtName.innerHTML = district.name;
-  districtLink.appendChild(districtName);
-  listPlace.appendChild(districtLink);
+function BuildDistrictsWindow(districts, listPlace, routes){
+  for (let district of districts){
+    const districtLink = document.createElement('a');
+    districtLink.setAttribute("id", "districts-window__district-link");
+    districtLink.href = "#";
+    districtLink.onclick = () => FindDistrict(district, routes);
+    const districtName = document.createElement('h2');
+    districtName.setAttribute("id", "districts-window__districts-text");
+    districtName.innerHTML = district.obj.name;
+    districtLink.appendChild(districtName);
+    listPlace.appendChild(districtLink);
+  }
+
 }
 
 function CloseWindow(){
@@ -225,13 +281,13 @@ function CloseWindow(){
   window.remove();
 }
 
-function FindDistrict(coords, district, routes){
+function FindDistrict(districtObj, routes){
+  const district = districtObj.obj;
+  const coords = districtObj.coords;
   CloseWindow();
   myMap.geoObjects.removeAll();
   const titleText = document.getElementById("transport-info__title-district");
   titleText.innerHTML = district.name;
-
-
   let arr = []
   if (coords !== moscowCenterCoords) {
     setDistrictOnMap(coords);
@@ -245,15 +301,34 @@ function FindDistrict(coords, district, routes){
     }
   }
   else {
-    setMap();
+    setMap(moscowCenterCoords);
     arr = routes;
   }
 
-
   const routeElements = document.getElementById('transport-info__list');
   routeElements.remove();
-  BuildRoutes(arr);
+  BuildRoutes(arr, districtObj);
 
+
+}
+
+function DisplayAllRoutes (routes, district){
+  myMap.geoObjects.removeAll();
+  console.log(district.coords);
+  if (district.coords === moscowCenterCoords) {
+    setMap(moscowCenterCoords);
+  }
+  else
+  {
+    setDistrictOnMap(district.coords)
+  }
+  for (let route of routes){
+    let coordinates = [];
+    for (stop of route.stops){
+      coordinates.push([stop.latitude, stop.longitude]);
+    }
+    DrawRouteOnMap(coordinates, route, true);
+  }
 
 }
 
@@ -263,7 +338,7 @@ function setDistrictOnMap (coords) {
 
 }
 
-function setMap(){
-  myMap.setCenter(moscowCenterCoords);
+function setMap(coords){
+  myMap.setCenter(coords);
   myMap.setZoom(10);
 }

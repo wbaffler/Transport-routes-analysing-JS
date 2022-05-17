@@ -14,13 +14,13 @@ function init () {
   myMap.options.set('maxZoom', 13);
   myMap.options.set('minZoom', 10);
 
-  /*myMap.controls.add('zoomControl',{
+  myMap.controls.add('zoomControl',{
     float: 'none',
     position: {
       top: '30px',
-      left: '420px'
+      left: '430px'
     }
-  });*/
+  });
   DataProcessing();
 }
 
@@ -70,7 +70,7 @@ function ProcessDistricts(districts) {
               coordinates: coords
             },
             properties: {
-              weight: district.stopsCount
+              weight: district.routePairsCount
             }
           }
           features.push(feature);
@@ -102,14 +102,6 @@ function DrawHeatMap(features, heatmap){
   heatmap.options.set('dissipating', true);
   heatmap.options.set('opacity', 0.7);
   heatmap.setData(data);
-}
-
-function DrawHeatMap2 (data, heatmap){
-  //var data = [[37.782551, -122.445368], [37.782745, -122.444586]];
-  //heatmap.setData(data);
-
-  var newData = [[37.774546, -122.433523], [37.784546, -122.433523]];
-  heatmap.setData(newData);
 }
 
 function BuildHtml(features){

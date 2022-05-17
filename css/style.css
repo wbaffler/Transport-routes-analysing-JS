@@ -332,7 +332,7 @@ body{
   position: fixed;
   flex-direction: column;
   display: flex;
-  padding: 0 60px;
+  padding-left: 60px;
   gap: 30px;
 }
 
@@ -685,7 +685,7 @@ body{
   border-radius: 30px;
 }
 
-#transport-info__route-link{
+.transport-info__route-link{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -694,11 +694,11 @@ body{
   height: 72px;
 }
 
-#transport-info__route-link:hover{
+.transport-info__route-link:hover{
   background: #f5f5f5;
 }
 
-#transport-info__routes-text{
+.transport-info__routes-text{
 
   height: 30px;
 
@@ -712,7 +712,7 @@ body{
   color: var(--color-text);
 }
 
-#transport-info__type-transport{
+.transport-info__type-transport{
   width: 62px;
   height: 22px;
 
@@ -727,7 +727,7 @@ body{
 
 }
 
-#transport-info__percent{
+.transport-info__percent{
   width: 41px;
   height: 27px;
 
