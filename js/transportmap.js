@@ -20,7 +20,10 @@ function init () {
       left: '430px'
     }
   });
+
+
   DataProcessing();
+
 }
 
 function DataProcessing() {
@@ -32,15 +35,62 @@ function DataProcessing() {
         .then(response => response.json()) // распарсим строку из тела HTTP ответа как JSON
         .then(districts => {
           DefineDistricts(districts).then(modDistricts => {
-            setRouteColor(routes).then(modRoutes =>
+            setRouteColor(routes).then(modRoutes => {
+              SetCheckbox(modDistricts[0], routes);
               BuildRoutes(modRoutes, modDistricts[0])
-            ).then(() => {
+            }).then(() => {
               let button = document.getElementById("districts-choice__button");
-              button.onclick = () => DisplayDistricts(modDistricts, routes)
+              button.onclick = () => DisplayDistricts(modDistricts, routes);
+
             })
           })
         })
     })
+
+}
+
+function DisplayAll(chbox, districtObj, routes){
+  if (chbox.checked){
+    ProcessAllRoutes().then(allRoutes =>
+      setRouteColor(allRoutes).then(modRoutes =>
+        FindDistrict(districtObj, modRoutes)
+      //BuildRoutes(allRoutes, districtObj)
+      ))
+  }
+  else{
+    //console.log(routes);
+    FindDistrict(districtObj, routes);
+    //DisplayAllRoutes(routes, districtObj)
+
+  }
+
+}
+
+function ProcessAllRoutes(){
+  return new Promise(function (resolve){
+    fetch('http://localhost:63342/transport/js/allroutes.json')
+      .then(response => response.json()) // распарсим строку из тела HTTP ответа как JSON
+      .then(routes => {
+        resolve(routes);
+      })
+  })
+}
+
+function SetCheckbox(districtObj, routes){
+  const area = document.getElementById("transport-info__checkbox-area");
+  const chbox = document.createElement('input');
+  chbox.setAttribute('type', 'checkbox');
+  chbox.setAttribute('id', 'checkmark');
+
+  const label = document.createElement('label');
+  label.setAttribute('for', 'checkmark');
+  label.setAttribute('id', 'transport-info__checkbox-text');
+  label.innerHTML = "Показать все маршруты";
+  chbox.onclick = () => DisplayAll(chbox, districtObj, routes);
+
+  area.appendChild(chbox);
+  area.appendChild(label);
+
 
 }
 
@@ -65,22 +115,32 @@ function BuildRoutes(routes, district){
       ReturnToOrigin(a);
     }
 
-    const routes_text = document.createElement('h2');
-    routes_text.setAttribute("class", "transport-info__routes-text");
-    routes_text.innerHTML = route.firstRoute.number + "-" + route.secondRoute.number;
+
 
     const type_transport = document.createElement('p');
     type_transport.setAttribute("class", "transport-info__type-transport");
     type_transport.innerHTML = route.firstRoute.type;
 
-    const percent = document.createElement('p');
-    percent.setAttribute("class", "transport-info__percent");
-    let matchPercentage = (route.matchPercentage * 100).toFixed(0);
-    percent.innerHTML = matchPercentage + "%"
-
-    a.appendChild(routes_text);
     a.appendChild(type_transport);
-    a.appendChild(percent);
+    if (route.matchPercentage !== 0)
+    {
+      const routes_text = document.createElement('h2');
+      routes_text.setAttribute("class", "transport-info__routes-text");
+      routes_text.innerHTML = route.firstRoute.number + "-" + route.secondRoute.number;
+      a.appendChild(routes_text);
+      const percent = document.createElement('p');
+      percent.setAttribute("class", "transport-info__percent");
+      let matchPercentage = (route.matchPercentage * 100).toFixed(0);
+      percent.innerHTML = matchPercentage + "%"
+      a.appendChild(percent);
+    }
+    else{
+      const routes_text = document.createElement('h2');
+      routes_text.setAttribute("class", "transport-info__routes-text");
+      routes_text.innerHTML = route.firstRoute.number;
+      a.appendChild(routes_text);
+    }
+
     divList.appendChild(a);
     //let coordinates = new Array();
 
@@ -113,12 +173,16 @@ function ReturnToOrigin(el) {
 }
 
 function DrawRouteOnMap(coordinates, route, isDistrict){
-  //let col = '#' + getRanHex(6);
+  let headerBalloon;
+  let stringBalloon;
+  if (route.matchPercentage !== 0){
+    headerBalloon = route.firstRoute.type +": " + route.firstRoute.number + " - " + route.secondRoute.number;
+    stringBalloon = "Совпадение: " + (route.matchPercentage * 100).toFixed(0) + '%';
+  }
+  else {
+    headerBalloon = route.firstRoute.type +": " + route.firstRoute.number;
 
-
-  let headerBalloon = route.firstRoute.type +": " + route.firstRoute.number + " - " + route.secondRoute.number;
-
-  let stringBalloon = "Совпадение: " + (route.matchPercentage * 100).toFixed(0) + '%';
+  }
   let routeLine = new ymaps.Polyline(
     coordinates,
     {
@@ -278,7 +342,10 @@ function BuildDistrictsWindow(districts, listPlace, routes){
 
 function CloseWindow(){
   const window = document.getElementById('districts-window');
-  window.remove();
+  if (window){
+    window.remove();
+  }
+
 }
 
 function FindDistrict(districtObj, routes){
@@ -290,6 +357,10 @@ function FindDistrict(districtObj, routes){
   titleText.innerHTML = district.name;
   let arr = []
   if (coords !== moscowCenterCoords) {
+    const chbox = document.getElementById("checkmark");
+    const label = document.getElementById("transport-info__checkbox-text");
+    chbox.remove();
+    label.remove();
     setDistrictOnMap(coords);
     for (let searchedRouteInDistrict of district.routePairsId){
       let route = routes.find(r =>
@@ -303,6 +374,17 @@ function FindDistrict(districtObj, routes){
   else {
     setMap(moscowCenterCoords);
     arr = routes;
+    if(document.getElementById("checkmark") && routes[0].matchPercentage !== 0)
+    {
+      const chbox = document.getElementById("checkmark");
+      const label = document.getElementById("transport-info__checkbox-text");
+      chbox.remove();
+      label.remove();
+    }
+    if(routes[0].matchPercentage !== 0) {
+      SetCheckbox(districtObj, routes);
+    }
+
   }
 
   const routeElements = document.getElementById('transport-info__list');
@@ -314,7 +396,6 @@ function FindDistrict(districtObj, routes){
 
 function DisplayAllRoutes (routes, district){
   myMap.geoObjects.removeAll();
-  console.log(district.coords);
   if (district.coords === moscowCenterCoords) {
     setMap(moscowCenterCoords);
   }
@@ -322,6 +403,7 @@ function DisplayAllRoutes (routes, district){
   {
     setDistrictOnMap(district.coords)
   }
+
   for (let route of routes){
     let coordinates = [];
     for (stop of route.stops){
